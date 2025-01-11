@@ -1,0 +1,20 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class JuegoNumeros {
+    public static void main(String[] args) {
+        Random random = new Random();
+        int numeroAleatorio = random.nextInt(10) + 1; // Número entre 1 y 10
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Adivina el número (entre 1 y 10): ");
+        int adivinanza = scanner.nextInt();
+
+        if (adivinanza == numeroAleatorio) {
+            System.out.println("¡Felicidades, acertaste!");
+        } else {
+            System.out.println("Intenta de nuevo. El número era: " + numeroAleatorio);
+        }
+    }
+}
+
